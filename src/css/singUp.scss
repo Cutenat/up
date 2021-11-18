@@ -1,0 +1,50 @@
+$titleCol:aliceblue;
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.singUp{
+  background-color: #131717;
+
+  .wrapper{
+    align-items: center;
+    padding: 35px 150px;
+    height: auto;
+
+
+    .title{
+      text-align: center;
+      font-size: 34px;
+      color:$titleCol;
+    }
+    .card{
+      .name{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: $titleCol;
+      }
+      .email{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: $titleCol;
+      }
+      .password{
+        display: flex;
+        flex-direction:column;
+        font-size: 20px;
+        color: $titleCol;
+
+      }
+      .btn{
+        padding: 8px 45px;
+        color: black;
+      }
+    }
+  }
+}
