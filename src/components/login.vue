@@ -6,13 +6,13 @@
       <p class="email">
         <label>EMAIL OR USERNAME
         </label>
-        <input type="text">
+        <input type="text" placeholder="your email address">
       </p>
       <p class="password">
         <label>
           PASSWORD
           </label>
-        <input type="password">
+        <input type="password" id="password-input" placeholder="password" name="password">
       </p>
       <button class="btn">log In</button>
     </div>

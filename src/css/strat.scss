@@ -1,0 +1,71 @@
+.mind{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  height: 100%;
+  &__menu{
+    align-items: center;
+    &_search {
+
+        width: 30px;
+        height: 30px;
+
+    }
+    padding-left: 80px;
+    justify-content: flex-start;
+    display: flex;
+    //justify-content: space-between;
+    &-card{
+      &_man{
+        text-decoration-color: #F2C037;
+        //text-decoration: none;
+      }
+      &_woman{
+
+      }
+    }
+  }
+  &__title{
+
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+
+  }
+  &__account{
+    padding-right: 80px;
+    justify-content: flex-end;
+    &_like{
+      padding-right: 20px;
+      img{
+        width: 35px;
+        height: auto;
+      }
+    }
+    &_bag{
+      img{
+        width: 30px;
+        height: auto;
+      }
+    }
+  }
+  .things{
+    position: absolute;
+    background: rgba(32,32,32,.75);
+    color: #fff;
+    &__cards{
+      .woman{
+        position: absolute;
+        top: 0;
+        object-fit: cover;
+        object-position: top center;
+      &__title{
+        z-index: 1;
+      }
+      }
+
+
+    }
+  }
+}

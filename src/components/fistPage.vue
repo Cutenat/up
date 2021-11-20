@@ -12,9 +12,10 @@
              </a>
           </p>
         <p class="links">
-          <a href="#/logIn"> log In </a> or <a href="#/browsing"> Start Browsing</a>
+          <router-link to="/logIn">log In </router-link> or <router-link to="/start">Start Browsing</router-link>
     </p>
     </div>
+
 
   </header>
 </div>
