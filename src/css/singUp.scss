@@ -1,50 +1,49 @@
-$titleCol:aliceblue;
-
-
-*{
-  margin: 0;
-  padding: 0;
-}
 .singUp{
-  background-color: #131717;
-
-  .wrapper{
-    align-items: center;
-    padding: 35px 150px;
-    height: auto;
-
-
-    .title{
-      text-align: center;
-      font-size: 34px;
-      color:$titleCol;
-    }
-    .card{
-      .name{
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: $titleCol;
-      }
-      .email{
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: $titleCol;
-      }
-      .password{
-        display: flex;
-        flex-direction:column;
-        font-size: 20px;
-        color: $titleCol;
-
-      }
-      .btn{
-        padding: 8px 45px;
-        color: black;
-      }
-    }
+  background-image: url("../assets/sss.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 414px;
+  height: 896px;
+  .a{
+    text-decoration: none;
+    color: black;
   }
+   h3 {
+     text-align: center;
+     font-family:initial, sans-serif;
+     color: #04264d;
+     font-size: 2.75rem;
+     font-weight: 500;
+     line-height: 3.75rem;
+     letter-spacing: -0.00833em;
+   }
+
+   .singUp__email {
+     width: 80%;
+     margin: 15px auto 20px;
+     height: 36px;
+   }
+   .singUp__email input {
+     width: 100%;
+     height: 100%;
+     border: 1px solid #dbdbdb;
+     border-radius: 3px;
+     padding-left: 5px;
+   }
+   .singUp__email input:focus {
+     outline: none;
+   }
+  .divBtn{
+    margin-left: 30px;
+  }
+
 }
+
+
+
+
+

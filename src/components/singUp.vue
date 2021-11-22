@@ -1,42 +1,84 @@
 <template>
-<div class="singUp">
- <div class="wrapper">
-   <h3 class="title">Sing Up</h3>
-    <div class="card">
-      <p class="name"><label>
-        FIRST & LAST NAME
-      </label>
-        <input type="text">
-      </p>
-      <p class="email">
-        <label>
-          Email Address
-        </label>
-        <input type="text">
-      </p>
-      <p class="password">
-        <label>
-          Password (8+ Characters)
-        </label>
-        <input type="password">
-      </p>
-      <button class="btn">
-        Sing Up
-      </button>
-    </div>
- </div>
+  <div v-if="step=== 'singUp'" class="singUp">
+        <h3 class="singUp__title">Make Your Life Easier</h3>
+        <div class="singUp__email">
+          <input v-model="userInputsModel.userEmail" type="text" placeholder="email address or username">
+        </div>
+    <div class="error " v-for="(error, idx ) in fieldError.userEmail" :key="idx">{{error}}</div>
+        <div class="singUp__email" >
+          <input v-model="userInputsModel.name" type="text" placeholder="FIRST nad LAST NAME">
+        </div>
+    <div class="error " v-for="(error, idx ) in fieldError.name" :key="idx">{{error}}</div>
+        <div class="singUp__email">
+          <input type="password" v-model="userInputsModel.password" id="password-input" placeholder="Password" name="password">
+        </div>
+    <div class="error " v-for="(error, idx ) in fieldError.password" :key="idx">{{error}}</div>
 
 
-</div>
+      <div class="login__btn">
+        <div class="divBtn">
 
+        <q-btn @click="signUp" outline style="color: black; width: 80%" label="Sing Up"/>
+      </div>
+      </div>
+  </div>
+  <div v-if="step=== 'start'"> <startBrowsing/></div>
 </template>
-
 <script>
+import {defineComponent} from 'vue'
+import validate from 'validate.js'
+import validateModels from '../utils/index'
+import startBrowsing from "components/startBrowsing";
 export default {
-  name: "singUp"
+  name:'singUp',
+  data() {
+    return {
+      userInputsModel :{
+        userEmail: '',
+        name:'',
+        password: '',
+      },
+      registerValidateModel:{
+        userEmail: validateModels.userEmail,
+        name:validateModels.name,
+        password: validateModels.password
+      },
+      step:'singUp',
+      fieldError:{},
+
+    }
+  },
+  components: { startBrowsing },
+  props: ['loginSuccess'],
+  methods: {
+    signUp () {
+      const modelInputs = {
+        userEmail: this.userInputsModel.userEmail,
+        name: this.userInputsModel.name,
+        password: this.userInputsModel.password,
+      }
+      console.log(modelInputs)
+      if (validate(modelInputs, this.registerValidateModel)){
+        this.fieldError = validate(modelInputs, this.registerValidateModel, {fullMessages: false}
+        )
+      }
+      else  {
+        this.step = 'start'
+        localStorage.setItem('userEmail', this.userInputsModel.userEmail)
+        localStorage.setItem('name', this.userInputsModel.name)
+        localStorage.setItem('password', this.userInputsModel.password)
+        console.log(localStorage)
+      }
+
+    },
+  },
+  mounted() {
+    //console.log(this.props[0])
+  }
+
+
 }
 </script>
-
 <style scoped>
 
 </style>

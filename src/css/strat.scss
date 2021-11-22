@@ -1,48 +1,36 @@
+body {
+  padding: 0 0 0;
+}
 .mind{
-  margin-top: 10px;
+  position: fixed;
+  height: 100px;
+  width: 414px;
+  background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 1;
-  height: 100%;
+
   &__menu{
     align-items: center;
-    &_search {
-
-        width: 30px;
-        height: 30px;
-
-    }
-    padding-left: 80px;
     justify-content: flex-start;
     display: flex;
-    //justify-content: space-between;
     &-card{
-      &_man{
-        text-decoration-color: #F2C037;
-        //text-decoration: none;
-      }
-      &_woman{
 
-      }
     }
   }
   &__title{
-
-    padding-left: 30px;
-    padding-right: 30px;
+    display: flex;
+    align-items: center;
     text-align: center;
+    font-size: 24px;
 
   }
   &__account{
-    padding-right: 80px;
+    display: flex;
+    align-items: center;
+
     justify-content: flex-end;
-    &_like{
-      padding-right: 20px;
-      img{
-        width: 35px;
-        height: auto;
-      }
-    }
+
     &_bag{
       img{
         width: 30px;
@@ -50,22 +38,17 @@
       }
     }
   }
-  .things{
-    position: absolute;
-    background: rgba(32,32,32,.75);
-    color: #fff;
-    &__cards{
-      .woman{
-        position: absolute;
-        top: 0;
-        object-fit: cover;
-        object-position: top center;
-      &__title{
-        z-index: 1;
-      }
-      }
+}
 
+.content {
+  .things{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    .my-card{
 
     }
   }
+
 }

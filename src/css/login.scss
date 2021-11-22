@@ -1,44 +1,166 @@
-$titleCol:aliceblue;
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/lo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 414px;
+  height: 896px;
+ .a{
+   text-decoration: none;
+   color: black;
+ }
 
-*{
-  margin: 0;
-  padding: 0;
 }
-.login{
-  background-color: #131717;
+.login {
+  min-height: 350px;
+  width: 350px;
+  text-align: center;
+  height: 377px;
+}
 
-  .wrapper{
-    align-items: center;
-    padding: 35px 150px;
-    height: auto;
+.login__title {
+  font-family:initial, sans-serif;
+  color: black;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 3.75rem;
+  letter-spacing: -0.00833em;
 
 
-    .title{
-      text-align: center;
-      font-size: 34px;
-      color:$titleCol;
-    }
-    .userInf{
-      .email{
-        display: flex;
-        flex-direction: column;
-        font-size: 20px;
-        font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: $titleCol;
-      }
-      .password{
-        display: flex;
-        flex-direction:column;
-        font-size: 20px;
-        color: $titleCol;
+}
+.login__email {
+  width: 80%;
+  margin: 30px auto 20px;
+  height: 36px;
+}
+.login__email input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.login__email input:focus {
+  outline: none;
+}
+.login__password {
+  width: 80%;
+  margin: 30px auto 20px;
+  height: 36px;
 
-      }
-      .btn{
-        padding: 8px 45px;
-        border: 2px solid orange;
-        border-radius: 2px ;
-        color: black;
-      }
-    }
-  }
+}
+.login__password input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+.login__password input:focus {
+  outline: none;
+}
+.login__btn {
+  height: 30px;
+  width: 80%;
+  margin: 0px auto;
+
+}
+.login__btn button {
+  //background-color: #e1d43a;
+  //border: 1px solid rgba(231, 78, 236, 0.78);
+  border-radius: 3px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+}
+.accountRegister {
+  display: flex;
+  width: 350px;
+  margin: 30px auto 0;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.accountRegister__link {
+  color: #00376b;
+  margin-left: 5px;
+
+}
+
+.twoLineDiv {
+  display: flex;
+  margin: 13px auto;
+  width: 79%;
+}
+
+.lineFirst {
+  background-color: rgba(var(--b38, 219, 219, 219), 1);
+  background-color: #dbdbdb;
+  height: 1px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-align: stretch;
+  margin-top: 11px;
+
+}
+
+.lineSecond {
+  background-color: rgba(var(--b38, 219, 219, 219), 1);
+  background-color: #dbdbdb;
+  height: 1px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-direction: column;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-sizing: border-box;
+  align-items: stretch;
+  border: 0 solid #000;
+  -webkit-box-align: stretch;
+  margin-top: 11px;
+}
+
+.lineText {
+  color: #8e8e8e;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: auto 20px;
+  font-weight: 600;
+}
+
+.passwordText {
+  color: #00376b;
+  font-size: 12px;
+  line-height: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.facebookIconAndText{
+  margin-top: 50px;
+}
+.error{
+  color: red;
+}
+.p{
+  margin-right: 220px;
+  line-height: 0px;
 }

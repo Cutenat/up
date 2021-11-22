@@ -19,13 +19,18 @@ const routes = [
   // Always leave this as last one,
   // but you can also remove it
   {
+    path: '/first',
+    component:()=> import('components/fistPage'),
+  },
+  {
+    path: '/start',
+    component: () => import('components/startBrowsing')
+  },
+
+  {
     path: '/:catchAll(.*)*',
     component: () => import('pages/Error404.vue')
   },
-  {
-    path: '/first',
-    component:()=> import('components/fistPage')
-  }
 ]
 
 export default routes
