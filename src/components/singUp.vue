@@ -2,14 +2,17 @@
   <div v-if="step=== 'singUp'" class="singUp">
         <h3 class="singUp__title">Make Your Life Easier</h3>
         <div class="singUp__email">
+          <label>Your email address</label>
           <input v-model="userInputsModel.userEmail" type="text" placeholder="email address or username">
         </div>
     <div class="error " v-for="(error, idx ) in fieldError.userEmail" :key="idx">{{error}}</div>
         <div class="singUp__email" >
+          <label>First and Last name</label>
           <input v-model="userInputsModel.name" type="text" placeholder="FIRST nad LAST NAME">
         </div>
     <div class="error " v-for="(error, idx ) in fieldError.name" :key="idx">{{error}}</div>
         <div class="singUp__email">
+          <label> Password</label>
           <input type="password" v-model="userInputsModel.password" id="password-input" placeholder="Password" name="password">
         </div>
     <div class="error " v-for="(error, idx ) in fieldError.password" :key="idx">{{error}}</div>

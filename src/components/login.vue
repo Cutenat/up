@@ -3,12 +3,12 @@
     <div class="login">
       <h1 class="login__title">Make life more comfortable </h1>
       <div class="login__email">
-        <div> <p class="p">email</p> </div>
+        <label> Email</label>
         <input v-model="userInputsModel.userEmail" type="text" placeholder="email address or username">
       </div>
       <div class="error " v-for="(error, idx ) in fieldError.userEmail" :key="idx">{{error}}</div>
       <div class="login__password">
-        <div> <p class="p">email</p> </div>
+        <label>PASSWORD</label>
         <input type="password" v-model="userInputsModel.password" id="password-input" placeholder="Password" name="password">
       </div>
       <div class="error " v-for="(error, idx ) in fieldError.password" :key="idx">{{error}}</div>

@@ -66,11 +66,9 @@
   height: 30px;
   width: 80%;
   margin: 0px auto;
-
 }
+
 .login__btn button {
-  //background-color: #e1d43a;
-  //border: 1px solid rgba(231, 78, 236, 0.78);
   border-radius: 3px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -82,7 +80,7 @@
 .accountRegister {
   display: flex;
   width: 350px;
-  margin: 30px auto 0;
+  margin: 90px auto 0;
   padding: 20px 0;
   align-items: center;
   justify-content: center;
@@ -163,4 +161,10 @@
 .p{
   margin-right: 220px;
   line-height: 0px;
+}
+.divBtn {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 50px;
 }
