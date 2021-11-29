@@ -24,8 +24,13 @@ const routes = [
   },
   {
     path: '/start',
-    component: () => import('components/startBrowsing')
+    component: () => import('components/startBrowsing'),
   },
+  {
+    path: '/cart',
+    component:()=> import('components/cart')
+  },
+
 
   {
     path: '/:catchAll(.*)*',

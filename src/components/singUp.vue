@@ -1,5 +1,6 @@
 <template>
   <div v-if="step=== 'singUp'" class="singUp">
+    <a class="back" href="" @click="$route.go(-1)">back</a>
         <h3 class="singUp__title">Make Your Life Easier</h3>
         <div class="singUp__email">
           <label>Your email address</label>
@@ -24,8 +25,10 @@
         <q-btn @click="signUp" outline style="color: black; width: 80%" label="Sing Up"/>
       </div>
       </div>
+
   </div>
   <div v-if="step=== 'start'"> <startBrowsing/></div>
+
 </template>
 <script>
 import {defineComponent} from 'vue'

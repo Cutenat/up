@@ -25,7 +25,7 @@
     </div>
 
     <div class="accountRegister">
-      Do you have account?
+     Don`t have an account ?
       <router-link to="/singUp" class="accountRegister__link">
         Create account
       </router-link>

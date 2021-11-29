@@ -1,2 +1,3 @@
-export function someMutation (/* state */) {
+export function ADD_PRODUCT (state, selectedProduct) {
+  state.productsInBasket.push(selectedProduct)
 }

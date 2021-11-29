@@ -1,0 +1,44 @@
+.cartItem{
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 25%;
+  width: 80%;
+  box-shadow: 0 0 8px 0 #e0e0e0 ;
+  padding: 5px;
+  margin: 10px;
+.card{
+
+  &__title{
+
+    &_name{
+
+    }
+    &_pirce{
+
+    }
+  }
+  &__btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_counts{
+      display: flex;
+      justify-content: space-between;
+      margin-right: 10px;
+      &_pluse{
+
+      }
+      &_count{
+
+      }
+      &_minus{
+
+      }
+    }
+    &_delete{
+
+    }
+  }
+}
+}
+

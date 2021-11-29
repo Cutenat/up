@@ -24,13 +24,10 @@
 
 
     </div>
-      <div class="mind__title">STADIUM GOODS</div>
+      <div class="mind__title">{{title}}</div>
     <div class="mind__account">
-      <router-link to="/singUp" class="mind__account_bag"> <img src="../assets/bag.jpeg" alt=""></router-link>
-<!--      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">-->
-<!--        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>-->
-<!--        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>-->
-<!--      </svg>-->
+      <router-link to="/cart" class="mind__account_bag"> <img src="../assets/bag.jpeg" alt=""></router-link>
+
 
     </div>
   </div>
@@ -65,19 +62,10 @@
    </q-carousel>
  </div>
    <div class="things">
-       <q-card class="my-card">
-         <q-img src="https://d2sg98d8lfy6hf.cloudfront.net/eyJidWNrZXQiOiJvdi1lbXMiLCJrZXkiOiJtZWRpYS9wcm9kdWN0cy9yZWNyZWF0aW9uLXBpY2t1cC1zd2VhdHNoaXJ0L3BvcHB5c2hpcmF6L1c1MDE1ODgtU0NULVBQU19SZWNyZWF0aW9uX1BpY2t1cF9Td2VhdHNoaXJ0X1BvcHB5X1NoaXJhel8wNTAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6Imluc2lkZSIsImhlaWdodCI6MTAwMDAsIndpZHRoIjo3MTd9LCJ0b0Zvcm1hdCI6IndlYnAifX0=">
-           <div class="absolute-bottom">
-             <div class="text-h6">Our Changing Planet</div>
-             <div class="text-subtitle2">by John Doe</div>
-           </div>
-         </q-img>
+     <div class="divProduct" v-for="product in products" :key="product.id" >
+       <catalogItem :product="product" />
+     </div>
 
-         <q-card-actions>
-           <q-btn flat></q-btn>
-           <q-btn flat>Action 2</q-btn>
-         </q-card-actions>
-       </q-card>
 
      </div>
  </div>
@@ -85,30 +73,88 @@
 
 </div>
 
+
 </template>
 
 <script>
+
 import { ref } from 'vue'
-//import { useQuasar } from 'quasar'
+
+import catalogItem from "components/catalogItem";
+
+import cart from "components/cart";
+
+
+
 
 
 export default {
   name: "startBrowsing",
+  components:{
+    // catalog,
+    catalogItem
+    // cart
+  },
+  props:{},
+  data(){
+    return{
+      title:'STADIUM GOODS',
+      products:[
+        {
+          id:1,
+          image:'4.jpg',
+          name:'jacket',
+          price:100,
+          article:'T1',
+          avalibale:true
+        },
+        {
+          id:2,
+          image:'sss.png',
+          name:'jacket 2',
+          price:200,
+          article:'T2',
+          avalibale:true
+        },
+        {
+          id:3,
+          image:'first.webp',
+          name:'jacket 3',
+          price:100,
+          article:'T3',
+          avalibale:false
+        },
+        {
+          id:4,
+          image:'4.jpg',
+          name:'jacket 4',
+          price:100,
+          article:'T4',
+          avalibale:true
+        },
+        {
+          id:5,
+          image:'5.jpg',
+          name:'jacket 5',
+          price:300,
+          article:'T5',
+          avalibale:true
+        }
+      ]
+
+    }
+  },
+  computed: {},
+  methods:{},
+  watch:{},
+  mounted() {},
   setup () {
     return {
       slide: ref(1),
       fullscreen: ref(false)
     }
   },
-  data(){
-    return{
-      setup () {
-        return {
-          lorem: 'Lorem ipsum ut labore et dolore magna aliqua.'
-        }
-      }
-    }
-  }
+
 
 }
 </script>
