@@ -2,8 +2,9 @@
 <div class="cartItem">
 
   <div class="img">
-<!--    <img src="../assets" alt="">-->
+   <img src="../assets/loginimg.png" alt="">
   </div>
+
   <div class="card">
     <div class="card__title">
       <div class="card__title_name">
@@ -11,7 +12,7 @@
 
       </div>
       <div class="card__title_price">
-        {{products.price}}
+        {{products.price}}$
       </div>
     </div>
 
@@ -25,7 +26,8 @@
 
      </div>
 
-     <div class="card__btn_delete"><button>delete</button></div>
+     <div class="card__btn_delete"><button class="del">delete</button></div>
+
    </div>
 
 
@@ -50,6 +52,8 @@ export default {
     }
   },
   methods:{
+
+    },
     reduce(){
       this.count++
     },
@@ -58,8 +62,6 @@ export default {
         this.count--
       }
     },
-
-  }
 }
 </script>
 

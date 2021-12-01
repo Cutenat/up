@@ -27,8 +27,6 @@
       <div class="mind__title">{{title}}</div>
     <div class="mind__account">
       <router-link to="/cart" class="mind__account_bag"> <img src="../assets/bag.jpeg" alt=""></router-link>
-
-
     </div>
   </div>
  <div class="content">

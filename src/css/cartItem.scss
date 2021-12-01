@@ -1,17 +1,27 @@
 .cartItem{
   display: flex;
   justify-content: space-between;
-  flex-basis: 25%;
-  width: 80%;
+  align-items: center;
+  flex-basis: 90%;
   box-shadow: 0 0 8px 0 #e0e0e0 ;
   padding: 5px;
   margin: 10px;
+  width: 100%;
+  .img{
+    width: 50%;
+   img{
+     width: 150px;
+
+   }
+  }
 .card{
 
   &__title{
-
     &_name{
-
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "Roboto", "-apple-system", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin-bottom: 15px;
     }
     &_pirce{
 
@@ -21,22 +31,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
     &_counts{
       display: flex;
       justify-content: space-between;
       margin-right: 10px;
-      &_pluse{
-
+      &-plus{
+        margin-right: 10px;
+        padding: 1px 6px;
+        background-color: rgba(255, 147, 0, 0.99);
+        color: white;
+        border-radius: 10%;
       }
-      &_count{
-
+      &-count{
+        margin-right: 10px;
       }
-      &_minus{
-
+      &-minus{
+        margin-right: 25px;
+        padding: 1px 6px;
+        background-color: rgba(255, 147, 0, 0.99);
+        color: white;
+        border-radius: 10%;
       }
     }
     &_delete{
+      .del{
+        background-color: rgba(255, 147, 0, 0.99);
+        color: #04264d;
+        padding: 4px 16px;
+        border-radius: 10%;
 
+      }
     }
   }
 }

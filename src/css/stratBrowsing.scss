@@ -5,7 +5,7 @@ body {
   position: fixed;
   height: 100px;
   width: 414px;
-  background-color: white;
+  background-color: #000f9f;
   display: flex;
   justify-content: space-around;
   z-index: 1;
@@ -23,12 +23,12 @@ body {
     align-items: center;
     text-align: center;
     font-size: 24px;
+    color: white;
 
   }
   &__account{
     display: flex;
     align-items: center;
-
     justify-content: flex-end;
 
     &_bag{
@@ -53,6 +53,7 @@ body {
   .divProduct{
     width: 100%;
     align-items: center;
+    margin-left: 100px;
     .catalogItem{
       width: 70%;
       align-items: center;

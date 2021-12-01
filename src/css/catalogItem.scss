@@ -1,6 +1,32 @@
 .catalogItem{
+  //margin-left: 50px;
   flex-basis: 25%;
   box-shadow: 0 0 8px 0 #e0e0e0 ;
   padding: 5px;
-  margin: 10px;
+  margin-top: 10px;
+  &__img{
+
+      img{
+        width: 150px;
+
+      }
+  }
+  &__btns{
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+    &_add{
+      //background-color: orange;
+      margin-bottom: 10px;
+    }
+    &_details{
+      margin-top: 10px;
+      .divBtn{
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
 }

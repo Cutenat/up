@@ -1,9 +1,12 @@
 <template>
 <div class="cart">
-  cart
-  <a href="" @click="$route.go(-1)">back</a>
-
+ <div class="cart__header">
+   <a class="cart__header-back" href="" @click="$route.go(-1)"> Go Back</a>
+   <div class="title"><h4>YOUR BAG</h4></div>
+   <a class="allClear" href="#">All Clear</a>
+ </div>
   <div class="cartItem" v-for="(product,id ) in basketProducts" :key="id">
+
     <cartItem :products="product"/>
   </div>
 </div>

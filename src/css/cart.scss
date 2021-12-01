@@ -1,3 +1,40 @@
-.back{
-  margin-top: 20px;
+.cart{
+  margin-top: 50px;
+  align-items: center;
+  position: absolute;
+  //background-color: #000f9f;
+  z-index: 2;
+
+ &__header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   &-back{
+     color: #000f9f;
+     margin-left: 10px;
+   }
+   .title{
+     text-align: center;
+     font-size: 26px;
+   }
+   .allClear{
+     color: #000f9f;
+     margin-right: 10px;
+   }
+ }
+  .order{
+    position: fixed;
+    z-index: 1;
+    align-items: center;
+    height: 100px;
+    width: 414px;
+    background-color: white;
+    .btn{
+      background-color: #0d47a1;
+      color:  rgba(255, 147, 0, 0.99);
+      padding: 8px 25px;
+      border-radius: 10%;
+    }
+  }
 }
+

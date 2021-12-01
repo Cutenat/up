@@ -30,6 +30,10 @@ const routes = [
     path: '/cart',
     component:()=> import('components/cart')
   },
+  {
+    path: '/details',
+    component:()=> import('components/productDetails')
+  },
 
 
   {
