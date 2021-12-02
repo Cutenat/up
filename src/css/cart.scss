@@ -9,16 +9,21 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
+   background-color: #000f9f;
+   position: fixed;
+   top: 0;
+   width: 100%;
    &-back{
-     color: #000f9f;
+     color: white;
      margin-left: 10px;
    }
    .title{
      text-align: center;
      font-size: 26px;
+     color: white;
    }
    .allClear{
-     color: #000f9f;
+     color: white;
      margin-right: 10px;
    }
  }

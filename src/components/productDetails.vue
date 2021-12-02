@@ -3,7 +3,7 @@
    <div class="header">
      <div class="header__menu">
        <div class="header__menu_back">
-         <a href="" @click="$route.go(-1)"> Go back</a>
+         <a @click="goStart"> Go back</a>
        </div>
        <div class="header__menu_title">{{title}}</div>
        <div class="header__menu_bag">
@@ -56,6 +56,11 @@ export default {
         slide: ref(1)
       }
     },
+  methods:{
+    goStart(){
+      this.$router.push('/start')
+    }
+  },
 
 
 

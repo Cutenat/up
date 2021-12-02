@@ -3,5 +3,6 @@ export default function () {
     products:[],
     cart: [],
     productsInBasket:[],
+    cartCount:0,
   }
 }

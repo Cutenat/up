@@ -2,7 +2,7 @@
 <div class="cartItem">
 
   <div class="img">
-   <img src="../assets/loginimg.png" alt="">
+    <img :src="products.image" alt="">
   </div>
 
   <div class="card">
@@ -26,7 +26,8 @@
 
      </div>
 
-     <div class="card__btn_delete"><button class="del">delete</button></div>
+     <div class="card__btn_delete"><button class="del"
+     @click="deleteProduct(products.id)">delete</button></div>
 
    </div>
 
@@ -52,7 +53,8 @@ export default {
     }
   },
   methods:{
-
+    deleteProduct(id){
+      this.$store.dispatch('products/deleteProduct', id);
     },
     reduce(){
       this.count++
@@ -60,9 +62,11 @@ export default {
     countAdd(){
       if(this.count>0 ){
         this.count--
+        console.log('add')
       }
     },
-}
+    },
+ }
 </script>
 
 <style scoped>

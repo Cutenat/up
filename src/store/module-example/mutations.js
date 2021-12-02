@@ -1,6 +1,23 @@
 export function ADD_PRODUCT (state, selectedProduct) {
-  state.productsInBasket.push(selectedProduct)
+  let found = state.productsInBasket.find(product => product.id === selectedProduct.id);
+  if (found) {
+    found.quantity ++;
+    found.totalPrice = found.quantity * found.price;
+  } else {
+    state.productsInBasket.push(selectedProduct);
+    selectedProduct.totalPrice = selectedProduct.price
+
+  }
+  state.cartCount++;
+  console.log(state.cartCount)
 }
-export function DELETE_FROM_CART(state,deltProducts){
-  state.productsInBasket.push(deltProducts)
+
+
+export function PRODUCT_MUTATION(state, products){
+  console.log(state.products)
+  return(
+    state.products=products
+  )
 }
+
+

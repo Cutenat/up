@@ -1,9 +1,9 @@
 <template>
 <div class="cart">
  <div class="cart__header">
-   <a class="cart__header-back" href="" @click="$route.go(-1)"> Go Back</a>
+   <span class="cart__header-back" @click="goStart"> Go Back</span>
    <div class="title"><h4>YOUR BAG</h4></div>
-   <a class="allClear" href="#">All Clear</a>
+   <span class="allClear">All Clear</span>
  </div>
   <div class="cartItem" v-for="(product,id ) in basketProducts" :key="id">
 
@@ -31,6 +31,11 @@ export default {
     ...mapState({
       basketProducts: (state) => state.example.productsInBasket,
     })
+  },
+  methods:{
+    goStart(){
+      this.$router.push('/start')
+    }
   },
   mounted() {
     console.log(this.basketProducts)

@@ -21,15 +21,15 @@
           </q-list>
         </q-menu>
       </q-btn>
-
-
     </div>
       <div class="mind__title">{{title}}</div>
     <div class="mind__account">
-      <router-link to="/cart" class="mind__account_bag"> <img src="../assets/bag.jpeg" alt=""></router-link>
+      <router-link to="/cart" class="mind__account_bag"> <img src="../assets/betterBag.jpeg" alt=""></router-link>
     </div>
   </div>
+
  <div class="content">
+
    <div class="carousel">
    <q-carousel
      swipeable
@@ -59,11 +59,11 @@
      </template>
    </q-carousel>
  </div>
+
    <div class="things">
      <div class="divProduct" v-for="product in products" :key="product.id" >
        <catalogItem :product="product" />
      </div>
-
 
      </div>
  </div>
@@ -77,8 +77,9 @@
 <script>
 
 import { ref } from 'vue'
-
-import catalogItem from "components/catalogItem";
+// import {mapActions, mapGetters, mapMutations} from 'vuex'
+import {mapMutations, mapActions, mapGetters} from 'vuex';
+import catalogItem from "./catalogItem";
 
 import cart from "components/cart";
 
@@ -89,61 +90,76 @@ import cart from "components/cart";
 export default {
   name: "startBrowsing",
   components:{
-    // catalog,
     catalogItem
-    // cart
+
   },
   props:{},
   data(){
     return{
-      title:'STADIUM GOODS',
-      products:[
-        {
-          id:1,
-          image:'4.jpg',
-          name:'jacket',
-          price:100,
-          article:'T1',
-          avalibale:true
-        },
-        {
-          id:2,
-          image:'sss.png',
-          name:'jacket 2',
-          price:200,
-          article:'T2',
-          avalibale:true
-        },
-        {
-          id:3,
-          image:'first.webp',
-          name:'jacket 3',
-          price:100,
-          article:'T3',
-          avalibale:false
-        },
-        {
-          id:4,
-          image:'4.jpg',
-          name:'jacket 4',
-          price:100,
-          article:'T4',
-          avalibale:true
-        },
-        {
-          id:5,
-          image:'5.jpg',
-          name:'jacket 5',
-          price:300,
-          article:'T5',
-          avalibale:true
-        }
-      ]
+       title:'STADIUM GOODS',
+      // clothing:[
+      //   {
+      //     id:1,
+      //     image:'4.jpg',
+      //     name:'jacket',
+      //     price:100,
+      //     article:'T1',
+      //     avalibale:true
+      //   },
+      //   {
+      //     id:2,
+      //     image:'sss.png',
+      //     name:'jacket 2',
+      //     price:200,
+      //     article:'T2',
+      //     avalibale:true
+      //   },
+      //   {
+      //     id:3,
+      //     image:'first.webp',
+      //     name:'jacket 3',
+      //     price:100,
+      //     article:'T3',
+      //     avalibale:false
+      //   },
+      //   {
+      //     id:4,
+      //     image:'4.jpg',
+      //     name:'jacket 4',
+      //     price:100,
+      //     article:'T4',
+      //     avalibale:true
+      //   },
+      //   {
+      //     id:5,
+      //     image:'5.jpg',
+      //     name:'jacket 5',
+      //     price:300,
+      //     article:'T5',
+      //     avalibale:true
+      //   }
+      // ]
 
     }
   },
-  computed: {},
-  methods:{},
+  computed: {
+    products () {
+      console.log(this.$store.getters['example/PRODUCTS_GETTER'])
+      return this.$store.getters['example/PRODUCTS_GETTER'];
+
+    },
+  },
+  methods:{
+    ...mapActions({
+      actionProduct:'example/GET_PRODUCT'
+    })
+
+  },
+  created() {
+    this.actionProduct()
+    // this.$store.dispatch("example/GET_PRODUCT");
+    console.log(this.products)
+  },
   watch:{},
   mounted() {},
   setup () {
